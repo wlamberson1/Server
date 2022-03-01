@@ -296,6 +296,9 @@ _Pvt_Extensions
 .paket/paket.exe
 paket-files/
 
+# Dependency directories
+node_modules/
+
 # FAKE - F# Make
 .fake/
 
