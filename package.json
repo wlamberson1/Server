@@ -7,7 +7,7 @@
     "morgan": "^1.10.0",
     "session-file-store": "^1.5.0"
   },
-  "name": "project1",
+  "name": "server",
   "version": "1.0.0",
   "description": "To-Do List",
   "main": "lib/server.js",
