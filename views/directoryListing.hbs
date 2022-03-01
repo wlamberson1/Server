@@ -20,17 +20,13 @@
                         {{~#each dirArray as |item|~}}
                             <tr>
                                 <td></td>
-                                {{!-- {{#if item.isDir~}}
-                                    <td align="center">
-                                        <div class="no-button"><img src="images/folder_black_24dp.svg"></div>
-                                    </td>
-                                {{else~}}
-                                    <td align="center">
-                                        <input type="hidden" name="command" value="rm">
-                                    </td>
-                                {{~/if}} --}}
                                 <td><a href="{{item.path}}">{{item.name}}</a></td>
-                                {{log "The path is " item.path}}
+                                {{#if item.isDir~}}
+                                    <td><td><button type="submit" formaction="rmdir">Remove</button></td></td>
+                                {{else~}}
+                                    <td><td><button type="submit" formaction="rm">Remove</button></td></td>
+                                    <td><td><button type="submit" href="{{item.path}}?download">Download</button></td></td>
+                                {{~/if}}
                             </tr>
                         {{~/each~}}
                     </table>
