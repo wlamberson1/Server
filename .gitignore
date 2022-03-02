@@ -300,7 +300,10 @@ paket-files/
 node_modules/
 
 # Sessions
-sessions/
+sessions/*
+
+# npm packs
+.tgz
 
 # FAKE - F# Make
 .fake/
