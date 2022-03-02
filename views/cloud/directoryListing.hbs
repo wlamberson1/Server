@@ -20,7 +20,7 @@
                         <tr>
                             <td></td>
                             <td><a href="{{item.path}}">{{item.name}}</a></td>
-                            {{#if item.isDir~}}
+                            {{!-- {{#if item.isDir~}}
                                 <form enctype="multipart/form-data" method="POST">
                                     <input type="hidden" name="file" value="{{item.name}}">
                                     <input type="hidden" name="command" value="rmdir">
@@ -32,7 +32,7 @@
                                     <input type="hidden" name="command" value="rm">
                                     <td><td><button type="submit">Remove</button></td></td>
                                 </form>
-                            {{~/if}}
+                            {{~/if}} --}}
                         </tr>
                     {{~/each~}}
                 </table>
@@ -42,23 +42,23 @@
         </tbody>
     </table>
 
-    <form method="POST" enctype="multipart/form-data" id="mkdir">
+    {{!-- <form method="POST" enctype="multipart/form-data" id="mkdir">
         <input type="hidden" name="command" value="mkdir">
-    </form>
-    <form method="POST" enctype="multipart/form-data" id="upload">
+    </form> --}}
+    <form method="POST" enctype="multipart/form-data" id="upload" action="upload">
         <input type="hidden" name="command" value="upload">
     </form>
     <table class="action">
         <tbody>
-        <tr>
+        {{!-- <tr>
             <td>Create folder:</td>
             <td><input type="text" name="dir" form="mkdir" pattern="^\S+$" title="No spaces"></td>
             <td><button type="submit" form="mkdir">Go</button></td>
-        </tr>
+        </tr> --}}
         <tr>
             <td>Upload file:</td>
             <td><input type="file" name="file" form="upload"></td>
-            <td><button type="submit" form="upload">Go</button></td>
+            <td><button type="submit" form="upload" value="Submit">Go</button></td>
         </tr>
         </tbody>
     </table>
