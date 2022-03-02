@@ -300,7 +300,7 @@ paket-files/
 node_modules/
 
 # Sessions
-sessions/*.json
+sessions/*
 
 # npm packs
 .tgz
