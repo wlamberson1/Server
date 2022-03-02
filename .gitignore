@@ -303,7 +303,7 @@ node_modules/
 sessions/*
 
 # npm packs
-.tgz
+*.tgz
 
 # FAKE - F# Make
 .fake/
