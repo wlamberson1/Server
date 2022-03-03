@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+    {{!-- <link rel="stylesheet" href="styles.css"> --}}
+</head>
+<body>
+    <h1>cloud/{{shortPath}}</h1>
+        <table id="listing">
+        <tbody>
+            <tr>
+                <th>Contents</th>
+            </tr>
+            {{#if dirArray~}}
+                <table>
+                    {{~#each dirArray as |item|~}}
+                        <tr>
+                            <td></td>
+                            <td><a href="{{item.path}}">{{item.name}}</a></td>
+                            {{!-- {{#if item.isDir~}}
+                                <form enctype="multipart/form-data" method="POST">
+                                    <input type="hidden" name="file" value="{{item.name}}">
+                                    <input type="hidden" name="command" value="rmdir">
+                                    <td><td><button type="submit">Remove</button></td></td>
+                                </form>
+                            {{else~}}
+                                <form enctype="multipart/form-data" method="POST">
+                                    <input type="hidden" name="file" value="{{item.name}}">
+                                    <input type="hidden" name="command" value="rm">
+                                    <td><td><button type="submit">Remove</button></td></td>
+                                </form>
+                            {{~/if}} --}}
+                        </tr>
+                    {{~/each~}}
+                </table>
+            {{else~}}
+                <h3>Empty Folder</h3>
+            {{~/if}}
+        </tbody>
+    </table>
+
+    {{!-- <form method="POST" enctype="multipart/form-data" id="mkdir">
+        <input type="hidden" name="command" value="mkdir">
+    </form> --}}
+    <form method="POST" enctype="multipart/form-data" id="upload">
+        <input type="hidden" name="command" value="upload">
+    </form>
+    <table class="action">
+        <tbody>
+        {{!-- <tr>
+            <td>Create folder:</td>
+            <td><input type="text" name="dir" form="mkdir" pattern="^\S+$" title="No spaces"></td>
+            <td><button type="submit" form="mkdir">Go</button></td>
+        </tr> --}}
+        <tr>
+            <td>Upload file:</td>
+            <td><input type="file" name="file" form="upload"></td>
+            <td><button type="submit" form="upload" value="Submit">Go</button></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

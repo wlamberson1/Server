@@ -5,9 +5,10 @@
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "morgan": "^1.10.0",
+    "multer": "^1.4.4",
     "session-file-store": "^1.5.0"
   },
-  "name": "project1",
+  "name": "server",
   "version": "1.0.0",
   "description": "To-Do List",
   "main": "lib/server.js",
@@ -21,6 +22,8 @@
   "author": "Wade Lamberson",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
