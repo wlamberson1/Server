@@ -302,6 +302,9 @@ node_modules/
 # Sessions
 sessions/*
 
+# MongoDB database
+db/*
+
 # npm packs
 *.tgz
 

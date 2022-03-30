@@ -1,0 +1,35 @@
+# Create a user
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+    "username": "gfoust",
+    "firstname": "Gabriel",
+    "lastname": "Foust"
+}
+
+###
+# Get one user
+GET http://localhost:8000/api/users/gfoust
+
+###
+# Get all users
+GET http://localhost:8000/api/users/
+
+###
+# Get courses for one user
+GET http://localhost:8000/api/items/users/wlamberson
+
+###
+# Update one user
+PUT http://localhost:8000/api/users/USERID
+Content-Type: application/application/json
+
+{
+    "text": "Create REST API",
+    "done": true
+}
+
+###
+# Delete one user
+DELETE http://localhost:8000/api/users/USERID
