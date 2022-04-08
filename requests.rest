@@ -1,0 +1,90 @@
+# Users
+###
+# Get all users
+GET http://localhost:8000/api/users/
+
+###
+# Create a user
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+    "username": "gfoust",
+    "firstname": "Gabriel",
+    "lastname": "Foust"
+}
+
+###
+# Get one user
+GET http://localhost:8000/api/users/gfoust
+
+###
+# Update one user
+PUT http://localhost:8000/api/users/wlamberson
+Content-Type: application/json
+
+{
+    "username": "imposter101",
+    "firstname": "John",
+    "lastname": "Doe"
+}
+
+###
+# Delete one user
+DELETE http://localhost:8000/api/users/gfoust
+
+
+
+#Courses
+###
+# Get all courses
+GET http://localhost:8000/api/courses/
+
+###
+# Create a course
+POST http://localhost:8000/api/courses/
+Content-Type: application/json
+
+{
+    "subject": "comp",
+    "number": "4310",
+    "teacher": "gfoust"
+}
+
+###
+# Get one course
+GET http://localhost:8000/api/courses/comp4310
+
+###
+# Update one course
+PUT http://localhost:8000/api/courses/comp4310
+Content-Type: application/json
+
+{
+    "subject": "comp",
+    "number": "4310",
+    "teacher": "wlamberson"
+}
+
+###
+# Delete one course
+DELETE http://localhost:8000/api/courses/comp4310
+
+###
+# Get all courses for one user
+GET http://localhost:8000/api/courses/users/wlamberson
+
+
+
+#Rosters
+###
+# Get students
+GET http://localhost:8000/api/rosters/comp4310
+
+###
+# Add student
+PUT http://localhost:8000/api/rosters/comp4310/wlamberson
+
+###
+# Remove student
+DELETE http://localhost:8000/api/rosters/comp4310/wlamberson
